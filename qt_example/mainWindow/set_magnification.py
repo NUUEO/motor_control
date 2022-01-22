@@ -31,7 +31,7 @@ class InputDialog(QDialog):
         self.sub_ui.num_9.clicked.connect(self.num_button)
         self.sub_ui.enter.clicked.connect(self.enter)
         self.sub_ui.clear.clicked.connect(self.clear)
-        self.sub_ui.display.setText("請輸入衰減倍率0~999")
+        self.sub_ui.display.setText("請輸入衰減倍率32~999")
         self.num_str = ''
         self.num = 0
         self.value = None
@@ -52,8 +52,12 @@ class InputDialog(QDialog):
     def enter(self):
         try:
             self.value = int(self.sub_ui.display.text())
+            if self.value < 32:
+                self.value = 32
+            else:
+                pass
         except ValueError:
-            self.value = 0
+            self.value = 32
         self.sub_ui.close()
 
     #顯示功能與限制倍率
@@ -69,7 +73,7 @@ class InputDialog(QDialog):
             self.num = int(self.num_str)
             if self.num > 999:
                 self.num = 999
-                self.num_str = '999'
+                self.num_str = '999'            
             else:
                 pass
         self.sub_ui.display.setText(self.num_str)
