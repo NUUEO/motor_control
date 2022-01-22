@@ -2,15 +2,22 @@
 # -*- coding: UTF-8 -*-
 
 from dis import dis
+import platform #確認系統類型
 from PySide2.QtWidgets import QApplication, QMainWindow, QPushButton, QMessageBox, QDialog
 from PySide2 import QtCore
 from PySide2.QtCore import Qt, QTimer
 from PySide2.QtUiTools import QUiLoader
 from command import Command
-from set_magnification import spinBoxInputDialog
+from set_magnification import InputDialog
 import serial
 import os
 
+#系統類型確認
+os_name = platform.system()
+if os_name== 'Windows':
+    uartport = 'COM1' #測試用連接阜
+else:
+    uartport = '/dev/tty'  #測試用連接阜
 
 com = Command()
 data = {
@@ -38,7 +45,7 @@ data = {
         }
 keylist = list(data)
 # export DISPLAY=':0.0' 利用該指令遠端ssh開啟gui程式
-class Stats(QtCore.QObject): #該類別必須為QObject，才可以調用sender
+class Stats(QMainWindow):
     def __init__(self):
         #初始化UI
         super().__init__()
@@ -63,7 +70,7 @@ class Stats(QtCore.QObject): #該類別必須為QObject，才可以調用sender
         #初始化計時器
         self.timer = QTimer()
         #初始化序列阜
-        self.ser = serial.Serial('/dev/tty',9600,timeout=1)
+        self.ser = serial.Serial(uartport,9600,timeout=1)
         for i in com.scan():
             self.ser.write(bytes(i,encoding='ASCII'))
         #初始化馬達
@@ -122,14 +129,14 @@ class Stats(QtCore.QObject): #該類別必須為QObject，才可以調用sender
         self.timer.singleShot(200,lambda:self.ser.write(bytes(com.ma(2,angleData[1]),encoding='ASCII')))
         self.timer.singleShot(300,lambda:self.ser.write(bytes(com.ma(3,angleData[2]),encoding='ASCII')))
 
-    @QtCore.Slot(int)
+    @QtCore.Slot()
     def set(self):
-        dialog = spinBoxInputDialog()
-        dialog.window.exec_()
-        self.setValue = dialog.enter()
-        print(self.setValue)
+        dialog = InputDialog.getValue(self)
+        print(dialog)
+        self.setValue = dialog
         tmp = str(self.setValue)+'x'
         self.display(tmp)
+    
     def shutdown(self):
         qm = QMessageBox.question(self.ui,"您確定要關機","確定嗎？",QMessageBox.Yes |QMessageBox.No, QMessageBox.Yes)
         if qm == QMessageBox.Yes:
