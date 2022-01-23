@@ -106,9 +106,9 @@ class Stats(QMainWindow):
     def display(self,magnification):
         self.timer.singleShot(100,lambda:self.ui.textBrowser.setText(f"目前倍率{magnification}"))
     def move(self,angleData):
-        self.timer.singleShot(100,lambda:self.ser.write(bytes(com.ma(1,angleData[0]),encoding='ASCII')))
-        self.timer.singleShot(200,lambda:self.ser.write(bytes(com.ma(2,angleData[1]),encoding='ASCII')))
-        self.timer.singleShot(300,lambda:self.ser.write(bytes(com.ma(3,angleData[2]),encoding='ASCII')))
+        self.timer.singleShot(1000,lambda:self.ser.write(bytes(com.ma(1,angleData[0]),encoding='ASCII')))
+        self.timer.singleShot(2000,lambda:self.ser.write(bytes(com.ma(2,angleData[1]),encoding='ASCII')))
+        self.timer.singleShot(3000,lambda:self.ser.write(bytes(com.ma(3,angleData[2]),encoding='ASCII')))
 
     @QtCore.Slot()
     def set(self):
