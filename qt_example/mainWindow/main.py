@@ -17,8 +17,10 @@ import os
 os_name = platform.system()
 if os_name== 'Windows':
     uartport = 'COM1' #測試用連接阜
+    path = './main.ui'
 else:
     uartport = '/dev/tty'  #測試用連接阜
+    path = "/home/pi/motor_control/qt_example/mainWindow/main.ui"
 
 com = Command()
 data = angleData()
@@ -28,7 +30,7 @@ class Stats(QMainWindow):
     def __init__(self):
         #初始化UI
         super().__init__()
-        self.ui =QUiLoader().load("/home/pi/motor_control/qt_example/mainWindow/main.ui")
+        self.ui =QUiLoader().load(path)
         self.ui.setWindowFlags(Qt.Window | Qt.FramelessWindowHint) #使其無邊框
         self.ui.resize(800,480)
         self.ui.move(0,0)

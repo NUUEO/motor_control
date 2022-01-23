@@ -18,20 +18,32 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>20</y>
+      <y>40</y>
       <width>580</width>
       <height>291</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>18</pointsize>
+     </font>
     </property>
    </widget>
    <widget class="QPushButton" name="backhome">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>20</y>
+      <y>40</y>
       <width>180</width>
       <height>90</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>回原點</string>
@@ -41,10 +53,16 @@
     <property name="geometry">
      <rect>
       <x>410</x>
-      <y>320</y>
+      <y>340</y>
       <width>180</width>
       <height>90</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>增加倍率</string>
@@ -54,10 +72,16 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>320</y>
+      <y>340</y>
       <width>180</width>
       <height>90</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>關機</string>
@@ -67,10 +91,16 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>220</y>
+      <y>240</y>
       <width>180</width>
       <height>90</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>停止</string>
@@ -80,10 +110,16 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>120</y>
+      <y>140</y>
       <width>180</width>
       <height>90</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>清潔</string>
@@ -93,10 +129,16 @@
     <property name="geometry">
      <rect>
       <x>610</x>
-      <y>320</y>
+      <y>340</y>
       <width>180</width>
       <height>90</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>減少倍率</string>
@@ -106,10 +148,16 @@
     <property name="geometry">
      <rect>
       <x>210</x>
-      <y>320</y>
+      <y>340</y>
       <width>180</width>
       <height>90</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微軟正黑體</family>
+      <pointsize>18</pointsize>
+     </font>
     </property>
     <property name="text">
      <string>設定倍率</string>
