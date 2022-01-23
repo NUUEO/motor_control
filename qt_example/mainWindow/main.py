@@ -126,7 +126,7 @@ class Stats(QMainWindow):
             self.timer.singleShot(1000,lambda:app.quit())
             os.system('cd /home/pi/motor_control/')
             os.system('git pull')
-            #os.system("sudo poweroff")
+            os.system("sudo poweroff")
         else:
             self.ui.textBrowser.setText("未完成關機")
 
