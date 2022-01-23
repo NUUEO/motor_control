@@ -996,7 +996,7 @@ class Stats(QMainWindow):
     def __init__(self):
         #初始化UI
         super().__init__()
-        self.ui =QUiLoader().load("main.ui")
+        self.ui =QUiLoader().load("/home/pi/motor_control/qt_example/mainWindow/main.ui")
         self.ui.setWindowFlags(Qt.Window | Qt.FramelessWindowHint) #使其無邊框
         self.ui.resize(800,480)
         self.ui.move(0,0)
@@ -1090,6 +1090,8 @@ class Stats(QMainWindow):
             self.stop()
             self.timer.singleShot(300,lambda:self.ui.textBrowser.setText("已關閉序列阜，正在關機"))
             self.timer.singleShot(1000,lambda:app.quit())
+            os.system('cd /home/pi/motor_control/')
+            os.system('git pull')
             #os.system("sudo poweroff")
         else:
             self.ui.textBrowser.setText("未完成關機")

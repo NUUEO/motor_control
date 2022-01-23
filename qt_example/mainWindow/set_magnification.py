@@ -9,7 +9,7 @@ from dis import dis
 class InputDialog(QDialog):
     def __init__(self, parent=None, title='', label='', reg=''):
         super(InputDialog, self).__init__(parent)
-        self.sub_ui = QUiLoader().load('./dialog.ui')
+        self.sub_ui = QUiLoader().load('/home/pi/motor_control/qt_example/mainWindow/dialog.ui')
         self.setup_ui()
 
     @property
