@@ -52,12 +52,12 @@ class InputDialog(QDialog):
     def enter(self):
         try:
             self.value = int(self.sub_ui.display.text())
-            if self.value < 32:
-                self.value = 32
+            if self.value < 3:
+                self.value = 0
             else:
                 pass
         except ValueError:
-            self.value = 32
+            self.value = 0
         self.sub_ui.close()
 
     #顯示功能與限制倍率
