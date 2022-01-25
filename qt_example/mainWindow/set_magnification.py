@@ -31,7 +31,7 @@ class InputDialog(QDialog):
         self.sub_ui.num_9.clicked.connect(self.num_button)
         self.sub_ui.enter.clicked.connect(self.enter)
         self.sub_ui.clear.clicked.connect(self.clear)
-        self.sub_ui.display.setText("請輸入衰減倍率32~999")
+        self.sub_ui.display.setText("請輸入衰減倍率32~9999")
         self.num_str = ''
         self.num = 0
         self.value = None
