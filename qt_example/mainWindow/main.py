@@ -65,11 +65,12 @@ class Stats(QMainWindow):
         
         #self.timer.singleShot(300,lambda:self.ser.write(bytes(com.home(1),encoding='ASCII')))
         self.timer.singleShot(100,lambda:self.ui.textBrowser.setText("馬達1回原點\n"))
-        self.timer.singleShot(1000,lambda:self.ser.write(bytes(com.home(2),encoding='ASCII')))
         self.timer.singleShot(600,lambda:self.ui.textBrowser.append("馬達2回原點\n"))
-        self.timer.singleShot(2000,lambda:self.ser.write(bytes(com.home(3),encoding='ASCII')))
         self.timer.singleShot(1000,lambda:self.ui.textBrowser.append("馬達3回原點\n"))
-        
+
+        self.timer.singleShot(1000,lambda:self.ser.write(bytes(com.home(2),encoding='ASCII')))
+        self.timer.singleShot(2000,lambda:self.ser.write(bytes(com.home(3),encoding='ASCII')))
+
         self.magnification = keylist[0]
         self.key = keylist
         self.key_num = 0
@@ -110,8 +111,8 @@ class Stats(QMainWindow):
         self.timer.singleShot(300,lambda:self.ui.textBrowser.setText(f"目前倍率{magnification}"))
     def move(self,angleData):
         #self.timer.singleShot(1000,lambda:self.ser.write(bytes(com.ma(1,angleData[0]+36),encoding='ASCII')))
-        self.timer.singleShot(1000,lambda:self.ser.write(bytes(com.ma(2,angleData[1]+105),encoding='ASCII')))
-        self.timer.singleShot(2000,lambda:self.ser.write(bytes(com.ma(3,angleData[2]+100),encoding='ASCII')))
+        self.timer.singleShot(3000,lambda:self.ser.write(bytes(com.ma(2,angleData[1]+105),encoding='ASCII')))
+        self.timer.singleShot(4000,lambda:self.ser.write(bytes(com.ma(3,angleData[2]+100),encoding='ASCII')))
 
     @QtCore.Slot()
     def set(self):
