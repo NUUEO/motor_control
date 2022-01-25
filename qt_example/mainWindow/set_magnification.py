@@ -71,9 +71,9 @@ class InputDialog(QDialog):
             self.num = 0
         else:
             self.num = int(self.num_str)
-            if self.num > 999:
-                self.num = 999
-                self.num_str = '999'            
+            if self.num > 9999:
+                self.num = 9999
+                self.num_str = '9999'            
             else:
                 pass
         self.sub_ui.display.setText(self.num_str)

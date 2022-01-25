@@ -83,9 +83,8 @@ class Stats(QMainWindow):
         self.ui.textBrowser.setText("馬達清潔指令，預計30秒後結束")
         self.timer.singleShot(1000,lambda:self.ser.write(bytes(com.clean(2),encoding='ASCII')))
         self.timer.singleShot(2000,lambda:self.ser.write(bytes(com.clean(3),encoding='ASCII')))
-        self.timer.singleShot(cleantime,lambda:self.ser.write(bytes(com.stop(1),encoding='ASCII')))
-        self.timer.singleShot(cleantime+1000,lambda:self.ser.write(bytes(com.stop(2),encoding='ASCII')))
-        self.timer.singleShot(cleantime+2000,lambda:self.ser.write(bytes(com.stop(3),encoding='ASCII')))
+        self.timer.singleShot(cleantime+2000,lambda:self.ser.write(bytes(com.stop(2),encoding='ASCII')))
+        self.timer.singleShot(cleantime+3000,lambda:self.ser.write(bytes(com.stop(3),encoding='ASCII')))
         self.timer.singleShot(cleantime,lambda:self.ui.textBrowser.setText("馬達已完成清潔"))
         self.backhome()
     def sub(self):
