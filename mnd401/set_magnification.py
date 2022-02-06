@@ -9,15 +9,16 @@ from dis import dis
 class InputDialog(QDialog):
     def __init__(self, parent=None, title='', label='', reg=''):
         super(InputDialog, self).__init__(parent)
-        self.sub_ui = QUiLoader().load('/home/pi/motor_control/qt_example/mainWindow/dialog.ui')
-        self.setup_ui()
+        self.sub_ui = QUiLoader().load('dialog.ui')
+        self.setup_ui(title,label)
 
     @property
     def window(self):
         return self.sub_ui
 
-    def setup_ui(self):
-        self.sub_ui.setWindowFlags(Qt.Window | Qt.FramelessWindowHint) #使其無邊框
+    def setup_ui(self,title,label):
+        #self.sub_ui.setWindowFlags(Qt.Window | Qt.FramelessWindowHint) #使其無邊框
+        self.sub_ui.setWindowTitle(title)
         self.sub_ui.move(300,129)
         self.sub_ui.num_0.clicked.connect(self.num_button)
         self.sub_ui.num_1.clicked.connect(self.num_button)
@@ -31,7 +32,7 @@ class InputDialog(QDialog):
         self.sub_ui.num_9.clicked.connect(self.num_button)
         self.sub_ui.enter.clicked.connect(self.enter)
         self.sub_ui.clear.clicked.connect(self.clear)
-        self.sub_ui.display.setText("請輸入衰減倍率32~9999")
+        self.sub_ui.display.setText(label)
         self.num_str = ''
         self.num = 0
         self.value = None
