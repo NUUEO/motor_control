@@ -217,12 +217,12 @@ class Stats(QMainWindow):
             self.display(100,"通過臨界倍率測試")
             temp = int(round(self.recommend_magnification/self.c,0)) #對應波長下應該的衰減倍率
             tm = int(self.magnification.replace('x','')) #實際倍率
-            distance = round(tm*self.c*self.Measure_distance/1000,1)
+            distance = round(tm*self.c*int(self.Measure_distance)/1000,1)
             if tm >= temp:
                 self.display(200,f"通過測試，最大測程大於標示距離：{int(int(self.Theoretical_distance)/1000)}公里")
                 self.display(300,f"推算數據測程可達{distance}公里",1)
             else:
-                self.display(200,f"該雷射測距儀未通過測試，未達{int(self.Theoretical_distance/1000)}公里")
+                self.display(200,f"該雷射測距儀未通過測試，未達{int(int(self.Theoretical_distance)/1000)}公里")
                 self.display(300,f"推算數據測程僅達{distance}公里",1)
         else:
             self.display(100,"未通過測試，請重新開始")
