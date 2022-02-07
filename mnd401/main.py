@@ -1,5 +1,4 @@
 from dis import dis
-import platform #確認系統類型
 from PySide2.QtWidgets import QApplication, QMainWindow, QMessageBox
 from PySide2 import QtCore
 from PySide2.QtCore import Qt, QTimer
@@ -12,7 +11,8 @@ import os
 
 path = "./main.ui"
 com = Command()
-uartport = "/dev/ttyUSB0"
+#uartport = "/dev/ttyUSB0"
+uartport = "COM1"
 
 class Stats(QMainWindow):
     def __init__(self):
@@ -60,9 +60,9 @@ class Stats(QMainWindow):
 
 # 功能鍵程式
     def stop(self):
-        self.timer.singleShot(self.uarttime*1,lambda:self.ser.write(bytes(com.stop(2),encoding='ASCII')))
-        self.timer.singleShot(self.uarttime*2,lambda:self.ser.write(bytes(com.stop(3),encoding='ASCII')))
-        self.display(1000,"中止馬達運作")
+        self.timer.singleShot(self.uarttime*0,lambda:self.ser.write(bytes(com.stop(2),encoding='ASCII')))
+        self.timer.singleShot(self.uarttime*1,lambda:self.ser.write(bytes(com.stop(3),encoding='ASCII')))
+        self.display(100,"中止馬達運作")
 
     def clean(self):
         cleantime = 30000
@@ -104,12 +104,12 @@ class Stats(QMainWindow):
 
     @QtCore.Slot()
     def start(self):
-        dialog = InputDialog.getValue(self,"雷射最大測程","請輸入最大量測距離")
+        dialog = InputDialog.getValue(self,"最大測程","請輸入最大量測距離",'',100000,0)
         self.setValue = dialog
-        tmp = str(self.setValue)
-        
-
-
+        self.Theoretical_distance = str(self.setValue)
+        dialog = InputDialog.getValue(self,"量測距離","請輸入實驗距離",'',10000,0)
+        self.setValue = dialog
+        self.Measure_distance = str(self.setValue)
 
     @QtCore.Slot()
     def select(self):

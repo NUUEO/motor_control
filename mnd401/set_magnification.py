@@ -7,11 +7,12 @@ from dis import dis
 
 
 class InputDialog(QDialog):
-    def __init__(self, parent=None, title='', label='', reg=''):
+    def __init__(self, parent=None, title='', label='', reg='',maximum=99999,minimum=0):
         super(InputDialog, self).__init__(parent)
         self.sub_ui = QUiLoader().load('dialog.ui')
         self.setup_ui(title,label)
-
+        self.maximum = maximum
+        self.minimum = minimum
     @property
     def window(self):
         return self.sub_ui
@@ -72,15 +73,15 @@ class InputDialog(QDialog):
             self.num = 0
         else:
             self.num = int(self.num_str)
-            if self.num > 9999:
-                self.num = 9999
-                self.num_str = '9999'            
+            if self.num > self.maximum:
+                self.num = self.maximum
+                self.num_str = str(self.maximum)
             else:
                 pass
         self.sub_ui.display.setText(self.num_str)
 
     @classmethod
-    def getValue(cls, parent, title='', label='', reg='[0-9]+$'):
-        dialog = cls(parent, title, label, reg)
+    def getValue(cls, parent, title='', label='', reg='[0-9]+$',maximum=9999,minimum=0):
+        dialog = cls(parent, title, label, reg, maximum, minimum)
         dialog.window.exec_()
         return dialog.value
