@@ -19,8 +19,13 @@
      <x>20</x>
      <y>70</y>
      <width>361</width>
-     <height>381</height>
+     <height>405</height>
     </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans CJK TC Medium</family>
+    </font>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
@@ -214,6 +219,11 @@
      <height>31</height>
     </rect>
    </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans CJK TC Medium</family>
+    </font>
+   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
@@ -223,12 +233,13 @@
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>211</width>
+     <width>361</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
+     <family>Noto Sans CJK TC Medium</family>
      <pointsize>25</pointsize>
     </font>
    </property>
@@ -247,6 +258,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Noto Sans CJK TC Medium</family>
      <pointsize>19</pointsize>
     </font>
    </property>
@@ -265,6 +277,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Noto Sans CJK TC Medium</family>
      <pointsize>20</pointsize>
     </font>
    </property>
@@ -275,7 +288,7 @@
     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="Done">
    <property name="geometry">
     <rect>
      <x>450</x>
@@ -286,6 +299,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Noto Sans CJK TC Medium</family>
      <pointsize>20</pointsize>
     </font>
    </property>
@@ -293,7 +307,7 @@
     <string>完成</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="Cancel">
    <property name="geometry">
     <rect>
      <x>610</x>
@@ -304,6 +318,7 @@
    </property>
    <property name="font">
     <font>
+     <family>Noto Sans CJK TC Medium</family>
      <pointsize>20</pointsize>
     </font>
    </property>

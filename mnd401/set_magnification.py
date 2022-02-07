@@ -20,6 +20,7 @@ class InputDialog(QDialog):
     def setup_ui(self,title,label):
         #self.sub_ui.setWindowFlags(Qt.Window | Qt.FramelessWindowHint) #使其無邊框
         self.sub_ui.setWindowTitle(title)
+        self.sub_ui.setWindowFlags(Qt.Window | Qt.FramelessWindowHint) #使其無邊框
         self.sub_ui.move(300,129)
         self.sub_ui.num_0.clicked.connect(self.num_button)
         self.sub_ui.num_1.clicked.connect(self.num_button)

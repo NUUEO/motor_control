@@ -211,25 +211,6 @@ p, li { white-space: pre-wrap; }
      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
    </widget>
-   <widget class="QSpinBox" name="select_wavelength">
-    <property name="geometry">
-     <rect>
-      <x>230</x>
-      <y>160</y>
-      <width>120</width>
-      <height>38</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Noto Sans CJK TC Medium</family>
-      <pointsize>14</pointsize>
-     </font>
-    </property>
-    <property name="specialValueText">
-     <string/>
-    </property>
-   </widget>
    <widget class="QPushButton" name="Clean">
     <property name="geometry">
      <rect>
@@ -350,6 +331,42 @@ p, li { white-space: pre-wrap; }
     <property name="pixmap">
      <pixmap>logo.png</pixmap>
     </property>
+   </widget>
+   <widget class="QComboBox" name="Select_wavelength">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>160</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Noto Sans CJK TC Medium</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <item>
+     <property name="text">
+      <string>1550nm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>1064nm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>905nm</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>808nm</string>
+     </property>
+    </item>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
