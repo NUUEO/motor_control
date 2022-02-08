@@ -9,7 +9,7 @@ from dis import dis
 class InputDialog(QDialog):
     def __init__(self, parent=None, title='', label='', reg='',maximum=99999,minimum=0):
         super(InputDialog, self).__init__(parent)
-        self.sub_ui = QUiLoader().load('dialog.ui')
+        self.sub_ui = QUiLoader().load('/home/pi/motor_control/mnd401/dialog.ui')
         self.setup_ui(title,label)
         self.maximum = maximum
         self.minimum = minimum

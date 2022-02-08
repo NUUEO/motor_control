@@ -8,7 +8,7 @@ from dis import dis
 class Final(QDialog):
     def __init__(self, parent=None, label=''):
         super(Final, self).__init__(parent)
-        self.sub_ui = QUiLoader().load('sub_1.ui')
+        self.sub_ui = QUiLoader().load('/home/pi/motor_control/mnd401/sub_1.ui')
         self.setup_ui(label)
     @property
     def window(self):
