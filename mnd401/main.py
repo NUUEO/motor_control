@@ -13,7 +13,7 @@ import os
 path = "./main.ui"
 com = Command()
 #uartport = "/dev/ttyUSB0"
-uartport = "COM1"
+uartport = "COM10"
 class MyLineEdit(QLineEdit):#修改QlineEdit的觸發信號
     clicked = Signal()
     def mouseReleaseEvent(self, QMouseEvent):
@@ -171,7 +171,7 @@ class Stats(QMainWindow):
             self.recommend_magnification = int(round(int(self.Theoretical_distance)/int(self.Measure_distance)/1,0))#視情況要不要除以波長倍率self.c
             self.magnification = str(self.recommend_magnification)+'x'
             self.display(200,f"建議倍率為{self.magnification}",1)
-
+            self.display(300,f"正在調整倍率...",1)
             self.move(self.data[self.magnification])#轉動馬達到指定倍率
             self.display(4000,f"目前倍率{self.magnification}",1)
             self.timer.singleShot(4100,lambda:self.limit())
@@ -197,6 +197,8 @@ class Stats(QMainWindow):
             else:
                 break
         self.display(100,f"臨界倍率為{self.keylist[self.key_num-1]}")
+        self.magnification = self.keylist[self.key_num-1]
+        self.move(self.data[self.magnification])
         self.timer.singleShot(1000,lambda:self.final_test())
     def limit_sub(self):
         while True:
@@ -213,6 +215,7 @@ class Stats(QMainWindow):
         if dialog == 0:
             self.display(100,"使用者取消")
             self.display(200,"請重新開始",1)
+            self.backhome()
         elif dialog == 1:
             self.display(100,"通過臨界倍率測試")
             temp = int(round(self.recommend_magnification/self.c,0)) #對應波長下應該的衰減倍率
@@ -226,6 +229,7 @@ class Stats(QMainWindow):
                 self.display(300,f"推算數據測程僅達{distance}公里",1)
         else:
             self.display(100,"未通過測試，請重新開始")
+            self.backhome()
 
 
     @QtCore.Slot()
