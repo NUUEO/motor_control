@@ -19,7 +19,6 @@ class Ui_MainWindow(object):
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(800, 480)
         font = QFont()
-        font.setFamilies([u"Noto Sans CJK TC"])
         font.setPointSize(18)
         MainWindow.setFont(font)
         self.centralwidget = QWidget(MainWindow)
@@ -28,13 +27,18 @@ class Ui_MainWindow(object):
         self.Start.setObjectName(u"Start")
         self.Start.setGeometry(QRect(370, 210, 120, 100))
         font1 = QFont()
-        font1.setFamilies([u"Noto Sans CJK TC Medium"])
+        font1.setFamilies([u"Microsoft YaHei UI"])
         font1.setPointSize(14)
+        font1.setBold(True)
         self.Start.setFont(font1)
         self.Display = QTextBrowser(self.centralwidget)
         self.Display.setObjectName(u"Display")
         self.Display.setGeometry(QRect(370, 69, 420, 131))
-        self.Display.setFont(font1)
+        font2 = QFont()
+        font2.setFamilies([u"Microsoft YaHei UI"])
+        font2.setPointSize(12)
+        font2.setBold(True)
+        self.Display.setFont(font2)
         self.Theoretical_distance = QLineEdit(self.centralwidget)
         self.Theoretical_distance.setObjectName(u"Theoretical_distance")
         self.Theoretical_distance.setGeometry(QRect(230, 80, 120, 30))
@@ -113,7 +117,7 @@ class Ui_MainWindow(object):
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QMenuBar(MainWindow)
         self.menubar.setObjectName(u"menubar")
-        self.menubar.setGeometry(QRect(0, 0, 800, 25))
+        self.menubar.setGeometry(QRect(0, 0, 800, 42))
         MainWindow.setMenuBar(self.menubar)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -128,10 +132,10 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.Start.setText(QCoreApplication.translate("MainWindow", u"\u958b\u59cb\u91cf\u6e2c", None))
         self.Display.setHtml(QCoreApplication.translate("MainWindow", u"<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><meta charset=\"utf-8\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Noto Sans CJK TC Medium'; font-size:14pt; font-weight:400; font-style:normal;\">\n"
-"<p align=\"right\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Noto Sans CJK TC'; font-size:18pt;\">\u89aa\u611b\u7684\u4f7f\u7528\u8005\uff0c\u60a8\u597d</span></p></body></html>", None))
+"</style></head><body style=\" font-family:'Microsoft YaHei UI'; font-size:12pt; font-weight:700; font-style:normal;\">\n"
+"<p align=\"right\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-family:'Noto Sans CJK TC'; font-size:18pt; font-weight:400;\">\u89aa\u611b\u7684\u4f7f\u7528\u8005\uff0c\u60a8\u597d</span></p></body></html>", None))
         self.label.setText(QCoreApplication.translate("MainWindow", u"\u6700\u5927\u6e2c\u8a66\u8ddd\u96e2(m)", None))
         self.Stop.setText(QCoreApplication.translate("MainWindow", u"\u4e2d\u6b62\u99ac\u9054", None))
         self.Shutdown.setText(QCoreApplication.translate("MainWindow", u"\u95dc\u6a5f", None))

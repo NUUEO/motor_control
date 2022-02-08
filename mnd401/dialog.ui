@@ -24,8 +24,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -43,8 +44,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -62,8 +64,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -81,8 +84,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -100,8 +104,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -119,8 +124,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -138,8 +144,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="alignment">
@@ -157,8 +164,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -176,8 +184,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -195,8 +204,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -214,8 +224,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -233,8 +244,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
@@ -252,8 +264,9 @@
    </property>
    <property name="font">
     <font>
-     <family>Noto Sans CJK TC Medium</family>
+     <family>Microsoft JhengHei UI</family>
      <pointsize>12</pointsize>
+     <bold>true</bold>
     </font>
    </property>
    <property name="text">
