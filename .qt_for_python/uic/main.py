@@ -105,7 +105,7 @@ class Ui_MainWindow(object):
         self.picture = QLabel(self.centralwidget)
         self.picture.setObjectName(u"picture")
         self.picture.setGeometry(QRect(20, 220, 330, 200))
-        self.picture.setPixmap(QPixmap(u"logo.png"))
+        self.picture.setPixmap(QPixmap(u"/home/pi/motor_control/mnd401/logo.png"))
         self.Select_wavelength = QComboBox(self.centralwidget)
         self.Select_wavelength.addItem("")
         self.Select_wavelength.addItem("")

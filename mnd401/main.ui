@@ -341,7 +341,7 @@ p, li { white-space: pre-wrap; }
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>logo.png</pixmap>
+     <pixmap>/home/pi/motor_control/mnd401/logo.png</pixmap>
     </property>
    </widget>
    <widget class="QComboBox" name="Select_wavelength">
