@@ -22,11 +22,6 @@
      <height>405</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>Noto Sans CJK TC Medium</family>
-    </font>
-   </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QCheckBox" name="checkBox_1">
@@ -38,7 +33,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -56,7 +52,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -74,7 +71,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -92,7 +90,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -110,7 +109,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -128,7 +128,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -146,7 +147,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -164,7 +166,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -182,7 +185,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -200,7 +204,8 @@
       </property>
       <property name="font">
        <font>
-        <pointsize>29</pointsize>
+        <family>Noto Sans CJK TC Medium</family>
+        <pointsize>18</pointsize>
        </font>
       </property>
       <property name="text">
@@ -219,11 +224,6 @@
      <height>31</height>
     </rect>
    </property>
-   <property name="font">
-    <font>
-     <family>Noto Sans CJK TC Medium</family>
-    </font>
-   </property>
    <property name="orientation">
     <enum>Qt::Horizontal</enum>
    </property>
@@ -233,14 +233,14 @@
     <rect>
      <x>20</x>
      <y>20</y>
-     <width>361</width>
+     <width>521</width>
      <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <family>Noto Sans CJK TC Medium</family>
-     <pointsize>25</pointsize>
+     <pointsize>18</pointsize>
     </font>
    </property>
    <property name="text">
@@ -259,7 +259,7 @@
    <property name="font">
     <font>
      <family>Noto Sans CJK TC Medium</family>
-     <pointsize>19</pointsize>
+     <pointsize>18</pointsize>
     </font>
    </property>
    <property name="text">
@@ -278,7 +278,7 @@
    <property name="font">
     <font>
      <family>Noto Sans CJK TC Medium</family>
-     <pointsize>20</pointsize>
+     <pointsize>18</pointsize>
     </font>
    </property>
    <property name="text">
@@ -288,11 +288,11 @@
     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
    </property>
   </widget>
-  <widget class="QPushButton" name="Done">
+  <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>200</y>
+     <x>400</x>
+     <y>340</y>
      <width>141</width>
      <height>131</height>
     </rect>
@@ -300,18 +300,18 @@
    <property name="font">
     <font>
      <family>Noto Sans CJK TC Medium</family>
-     <pointsize>20</pointsize>
+     <pointsize>18</pointsize>
     </font>
    </property>
    <property name="text">
     <string>完成</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="Cancel">
+  <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>610</x>
-     <y>200</y>
+     <x>650</x>
+     <y>340</y>
      <width>141</width>
      <height>131</height>
     </rect>
@@ -319,11 +319,51 @@
    <property name="font">
     <font>
      <family>Noto Sans CJK TC Medium</family>
-     <pointsize>20</pointsize>
+     <pointsize>18</pointsize>
     </font>
    </property>
    <property name="text">
     <string>取消測試</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>400</x>
+     <y>80</y>
+     <width>381</width>
+     <height>141</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Noto Sans CJK TC Medium</family>
+     <pointsize>18</pointsize>
+    </font>
+   </property>
+   <property name="autoFillBackground">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>請依序量測該臨界倍率下。
+是否有測試數據
+若有資料請在該測項勾選。</string>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>40</y>
+     <width>161</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>（未勾選視為無法量測）</string>
    </property>
   </widget>
  </widget>
