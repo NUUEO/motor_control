@@ -10,10 +10,10 @@ from angle_data import angleData
 import serial
 import os
 
-path = "./main.ui"
+path = "/home/pi/motor_control/mnd401/main.ui"
 com = Command()
-#uartport = "/dev/ttyUSB0"
-uartport = "COM10"
+uartport = '/dev/ttyS0'
+#uartport = "COM10"
 class MyLineEdit(QLineEdit):#修改QlineEdit的觸發信號
     clicked = Signal()
     def mouseReleaseEvent(self, QMouseEvent):
@@ -118,12 +118,9 @@ class Stats(QMainWindow):
             self.stop()
             self.display(100,"正在關機...")
             self.timer.singleShot(1000,lambda:app.quit())
-
-            '''
             os.system('cd /home/pi/motor_control/')
             os.system('git pull')
-            os.system("sudo poweroff")
-            '''
+            self.timer.singleShot(5000,lambda:os.system("sudo poweroff"))
         else:
             self.display(100,"未完成關機")
 
