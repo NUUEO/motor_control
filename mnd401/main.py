@@ -117,7 +117,7 @@ class Stats(QMainWindow):
         if qm == QMessageBox.Yes:
             self.stop()
             self.display(100,"正在關機...")
-            self.timer.singleShot(1000,lambda:app.quit())
+            #self.timer.singleShot(1000,lambda:app.quit())
             os.system('cd /home/pi/motor_control/')
             os.system('git pull')
             self.timer.singleShot(5000,lambda:os.system("sudo poweroff"))
