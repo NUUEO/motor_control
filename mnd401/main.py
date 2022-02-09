@@ -12,7 +12,7 @@ import os
 
 path = "/home/pi/motor_control/mnd401/main.ui"
 com = Command()
-uartport = '/dev/ttyS0'
+uartport = '/dev/ttyUSB0'
 #uartport = "COM10"
 class MyLineEdit(QLineEdit):#修改QlineEdit的觸發信號
     clicked = Signal()
