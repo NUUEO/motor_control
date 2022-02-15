@@ -12,8 +12,8 @@ import os
 
 path = "./main.ui"
 com = Command()
-#uartport = "/dev/ttyUSB0"
-uartport = "COM10"
+uartport = "/dev/ttyUSB0"
+#uartport = "COM10"
 class MyLineEdit(QLineEdit):#修改QlineEdit的觸發信號
     clicked = Signal()
     def mouseReleaseEvent(self, QMouseEvent):
